@@ -68,7 +68,7 @@ const Header = () => {
           />
 
           {toggleMenu && (
-            <div className="absolute tablet:hidden flex top-10 bg-white p-3 shadow-md">
+            <div className="absolute z-10 tablet:hidden flex top-10 bg-white p-3 shadow-md">
               <ul className="list-none items-center justify-center flex-col gap-4">
                 <li className="text-base font-bold text-black hover:text-orange-900 hover:underline underline-offset-2 cursor-pointer duration-300">
                   Home
