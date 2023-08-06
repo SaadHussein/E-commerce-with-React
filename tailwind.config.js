@@ -9,7 +9,10 @@ export const theme = {
   },
   screens: {
     xl: "1280px",
+    large: "900px",
     tablet: "700px",
+    smallTab: "550px",
+    bigPhone: "410px",
     mobile: "330px",
   },
 };
