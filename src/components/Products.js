@@ -1,7 +1,7 @@
 import React from "react";
 import ProductsCard from "./ProductsCard";
 
-const Products = () => {
+const Products = ({ products }) => {
   return (
     <div className="py-10">
       <div className="flex flex-col items-center gap-4">
@@ -16,7 +16,7 @@ const Products = () => {
           asperiores repudiandae assumenda quidem.
         </p>
       </div>
-      <div className="mx-auto max-w-screen-xl">
+      <div className="mx-auto max-w-screen-xl py-10">
         <ProductsCard />
       </div>
     </div>

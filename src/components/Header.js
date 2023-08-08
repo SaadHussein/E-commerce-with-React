@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <div className="w-full h-20 border-b-[1px] border-b-gray-800 font-titleFont">
+    <div className="w-full h-20 border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50 bg-white">
       <div className="flex items-center justify-between max-w-screen-xl h-full mx-4 xl:mx-auto">
         <div>
           <img
