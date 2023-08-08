@@ -16,8 +16,10 @@ const Products = ({ products }) => {
           asperiores repudiandae assumenda quidem.
         </p>
       </div>
-      <div className="mx-auto max-w-screen-xl py-10">
-        <ProductsCard />
+      <div className="xl:mx-auto mx-5 max-w-screen-xl py-10 grid xl:grid-cols-4 midLarge:grid-cols-3 smallTab:grid-cols-2 grid-cols-1 gap-8 items-start justify-between">
+        {products.map((item) => (
+          <ProductsCard key={item._id} product={item} />
+        ))}
       </div>
     </div>
   );

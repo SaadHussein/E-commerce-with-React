@@ -10,6 +10,7 @@ export const theme = {
   screens: {
     xl: "1280px",
     large: "900px",
+    midLarge: "820px",
     tablet: "700px",
     smallTab: "550px",
     bigPhone: "410px",
