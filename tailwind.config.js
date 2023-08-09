@@ -9,6 +9,7 @@ export const theme = {
   },
   screens: {
     xl: "1280px",
+    maxLarge: "1000px",
     large: "900px",
     midLarge: "820px",
     tablet: "700px",
