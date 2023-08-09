@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { cartImg, logoDark } from "../assets";
 import { GrMenu, GrClose } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const productData = useSelector((state) => state.bazar.productData);
+
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const menuHandler = () => {
@@ -61,7 +64,7 @@ const Header = () => {
               className="w-6 cursor-pointer"
             />
             <span className="absolute w-6 top-2 left-0 flex items-center justify-center font-semibold text-sm">
-              0
+              {productData.length}
             </span>
           </div>
           <img
