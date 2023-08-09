@@ -57,16 +57,18 @@ const Header = () => {
               className="cursor-pointer tablet:hidden block"
             />
           )}
-          <div className="relative">
-            <img
-              src={cartImg}
-              alt="Cart Image"
-              className="w-6 cursor-pointer"
-            />
-            <span className="absolute w-6 top-2 left-0 flex items-center justify-center font-semibold text-sm">
-              {productData.length}
-            </span>
-          </div>
+          <Link to="/cart">
+            <div className="relative">
+              <img
+                src={cartImg}
+                alt="Cart Image"
+                className="w-6 cursor-pointer"
+              />
+              <span className="absolute w-6 top-2 left-0 cursor-pointer flex items-center justify-center font-semibold text-sm">
+                {productData.length}
+              </span>
+            </div>
+          </Link>
           <img
             src="https://images.unsplash.com/photo-1690934872924-4deafe751039?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
             alt="Logo Image"
