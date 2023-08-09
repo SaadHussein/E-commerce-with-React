@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { cartImg, logoDark } from "../assets";
 import { GrMenu, GrClose } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -13,11 +14,13 @@ const Header = () => {
     <div className="w-full h-20 border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50 bg-white">
       <div className="flex items-center justify-between max-w-screen-xl h-full mx-4 xl:mx-auto">
         <div>
-          <img
-            src={logoDark}
-            alt="Logo Image"
-            className="object-contain w-28"
-          />
+          <Link to="/">
+            <img
+              src={logoDark}
+              alt="Logo Image"
+              className="object-contain w-28"
+            />
+          </Link>
         </div>
         <div className="flex items-center mobile:gap-8 gap-4 relative">
           <ul className="list-none tablet:flex hidden items-center gap-8">
