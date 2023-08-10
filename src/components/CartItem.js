@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,7 +16,7 @@ const CartItem = () => {
   const productData = useSelector((state) => state.bazar.productData);
 
   return (
-    <div className="maxLarge:w-2/3 w-full maxLarge:pr-10 pr-0">
+    <div className="flex flex-col justify-start tablet:justify-center maxLarge:w-2/3 w-full maxLarge:pr-10 pr-0">
       <div className="w-full">
         <h2 className="font-titleFont text-2xl">Shopping Cart</h2>
       </div>
@@ -24,16 +24,18 @@ const CartItem = () => {
         {productData.map((item) => (
           <div
             key={item._id}
-            className="relative flex tablet:flex-row flex-col border items-center justify-between py-2 gap-6 mt-6"
+            className="relative flex tablet:flex-row flex-col border items-center justify-between py-2 px-1 gap-6 mt-6"
           >
             <div className="flex items-center gap-2">
-              <MdOutlineClose
+              <p
                 onClick={() =>
                   dispatch(deleteItem(item._id)) &
                   toast.error(`${item.title} is Removed`)
                 }
-                className="text-xl text-gray-600 hover:text-red-600 cursor-pointer duration-300 tablet:block hidden"
-              />
+                className="text-xl text-gray-600 font-titleFont hover:text-red-600 cursor-pointer duration-300 tablet:block hidden"
+              >
+                x
+              </p>
               <img
                 src={item.image}
                 alt="Product Image"
@@ -41,7 +43,7 @@ const CartItem = () => {
               />
             </div>
             <h2 className="w-52 text-center">{item.title}</h2>
-            <h2 className="w-52 text-center">One Item Price: ${item.price}</h2>
+            <h2 className="w-52 text-center">Item Price: ${item.price}</h2>
             <div className="w-52 flex items-center justify-between text-gray-500 gap-4 border p-3">
               <p className="text-sm">Quantity</p>
               <div className="flex items-center gap-4 text-sm font-semibold">
@@ -83,7 +85,7 @@ const CartItem = () => {
               </div>
             </div>
             <p className="w-52 text-center">
-              Total Item Price: ${item.quantity * item.price}
+              Total: ${item.quantity * item.price}
             </p>
 
             <MdOutlineClose
@@ -100,7 +102,7 @@ const CartItem = () => {
         onClick={() =>
           dispatch(resetCart()) & toast.error("Your Cart is Empty..!")
         }
-        className="text-white bg-red-500 mt-8 ml-7 py-1 px-6 hover:bg-red-800 duration-300"
+        className="text-white bg-red-500 w-48 mt-8 ml-7 py-1 px-6 hover:bg-red-800 duration-300"
       >
         Reset Cart
       </button>
