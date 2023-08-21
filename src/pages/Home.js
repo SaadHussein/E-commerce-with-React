@@ -8,6 +8,14 @@ const Home = () => {
 
   const data = useLoaderData();
 
+  console.log(data);
+
+  data.data.forEach(
+    (item) =>
+      (item.image =
+        "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=600")
+  );
+
   useEffect(() => {
     setProducts(data.data);
   }, [data]);
