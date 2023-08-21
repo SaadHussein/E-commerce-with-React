@@ -33,7 +33,7 @@ const Banner = () => {
             loading="priority"
           />
           <img
-            src={data[1]}
+            src={data[3]}
             alt="ImageinHero"
             className="w-screen h-full object-cover"
             loading="priority"
